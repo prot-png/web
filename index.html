@@ -1,36 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>For You</title>
-  <style>
-    body {
-      display: flex;
-      height: 100vh;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      background: #ffe6f0;
-    }
-    button {
-      padding: 20px 30px;
-      font-size: 20px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      background: #ff4d88;
-      color: white;
-    }
-  </style>
-</head>
-<body>
-  <button onclick="ask()">Open</button>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine?</title>
 
-  <script>
-    function ask() {
-      document.body.innerHTML =
-        "<h1>Will you come on a date with me?</h1>";
+<!-- Romantic Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-  </script>
+
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("bruh.jpg") no-repeat center center/cover;
+        font-family: 'Poppins', sans-serif;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Dark overlay */
+    body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+    }
+
+    .content {
+        position: relative;
+        text-align: center;
+        color: white;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+        font-family: 'Great Vibes', cursive;
+        font-size: 4rem;
+        margin-bottom: 20px;
+        text-shadow: 0 0 20px rgba(255, 0, 90, 0.8);
+    }
+
+    .heart {
+        font-size: 3rem;
+        color: #ff2e63;
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Will You Be My Valentine?</h1>
+        <div class="heart">❤</div>
+    </div>
 </body>
 </html>
