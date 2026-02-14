@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>For You</title>
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #ffe6f0;
+    }
+    button {
+      padding: 20px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #ff4d88;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="ask()">Open</button>
+
+  <script>
+    function ask() {
+      document.body.innerHTML =
+        "<h1>Will you come on a date with me?</h1>";
+    }
+  </script>
+</body>
+</html>
